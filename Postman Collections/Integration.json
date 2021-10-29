@@ -1,0 +1,369 @@
+{
+  "info": {
+    "_postman_id": "5518c370-75da-4928-a2ab-e8f747bd4a0a",
+    "name": "GitHub",
+    "description": "Reference Doc: https://docs.github.com/en/rest\n\nUser Creds:\nimplementation@vdbapp.com\nVdb@2021#\n\nToken: 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",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Org Repos",
+      "_postman_id": "a71052fa-1290-4dbd-9af3-25d07e902465",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true,
+        "disabledSystemHeaders": {}
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "url": "https://api.github.com/orgs/vdbapp/repos"
+      },
+      "response": []
+    },
+    {
+      "name": "Get User Repos",
+      "_postman_id": "6715cf4b-f0fe-489b-8269-fe69444018da",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android"
+      },
+      "response": []
+    },
+    {
+      "name": "Mater Details",
+      "_postman_id": "d0fa0c31-30d7-4fbf-bf3a-3eb52cdaee3c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/git/refs/heads/master"
+      },
+      "response": []
+    },
+    {
+      "name": "Head Details",
+      "_postman_id": "6e287f65-1738-4b87-822d-2db3dbbb2c46",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/git/refs/heads"
+      },
+      "response": []
+    },
+    {
+      "name": "Creating a branch",
+      "_postman_id": "6d7fc6f3-6666-42cd-a388-e40355b564c1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"ref\": \"refs/heads/test_branch_oct_29\",\r\n    \"sha\": \"a9a2b40560b290fc312425753a5624b170c96db3\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/git/refs"
+      },
+      "response": []
+    },
+    {
+      "name": "Getting all pull requests",
+      "_postman_id": "1eeeb74e-2861-49b9-82fa-51654f6670a4",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/pulls"
+      },
+      "response": []
+    },
+    {
+      "name": "Getting a pull request by number",
+      "_postman_id": "1fe4177e-45b3-4164-8a9b-6fcfc77e37ef",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/pulls/1883"
+      },
+      "response": []
+    },
+    {
+      "name": "Updating a pull request",
+      "_postman_id": "562398a4-b216-4365-a568-7bf2737d15a5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"VDB-15913\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/pulls/1883"
+      },
+      "response": []
+    },
+    {
+      "name": "Creating a pull request",
+      "_postman_id": "1a83ed23-82d5-48be-b4ac-073a76359ed7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"head\": \"task/VDB-15913\",\r\n    \"base\": \"master\",\r\n    \"title\": \"VDB-15913\",\r\n    \"body\": \"New Custom App Meylor Global\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/pulls"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Reviewers List",
+      "_postman_id": "e11470d6-6e80-4f5e-9c2f-faec660c60f0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/pulls/1883/requested_reviewers"
+      },
+      "response": []
+    },
+    {
+      "name": "Add Reviewers",
+      "_postman_id": "ee858ac6-f9c9-45ef-b0a3-9484d8a711bc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"reviewers\": [\r\n    \"rishirajput\",\"rajesh-vdbapp\"\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/repos/vdbapp/illuminex-android/pulls/1883/requested_reviewers"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Team",
+      "_postman_id": "1d692c01-50d0-4372-a579-4d1fd4564cc8",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/orgs/vdbapp/teams"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Team Members By Name",
+      "_postman_id": "e6c1a11f-9d59-4f73-b7e8-814d4390fcf0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://api.github.com/orgs/vdbapp/teams/android-developers/members"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "3e7bb7e9-dabe-4f11-b801-ffabcfa6d4b7",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "af356956-cd79-4a1b-be48-1f8e6508fae3",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "983a0d73-7886-431d-b021-fe08e913f583",
+      "key": "auth_token",
+      "value": "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",
+      "type": "string"
+    }
+  ]
+}
