@@ -364,7 +364,7 @@
             }
           }
         },
-        "url": "https://api.github.com/repos/VDBAPP/illuminex-android/dispatches"
+        "url": "https://api.github.com/repos/subhamkhemka1993/Test-Repository/dispatches"
       },
       "response": []
     }
@@ -393,7 +393,7 @@
   ],
   "variable": [
     {
-      "id": "cd33bf56-3d17-4d82-b02d-86c4e9990185",
+      "id": "67bb9975-6a0f-4796-ad15-ff17b69d820c",
       "key": "auth_token",
       "value": "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"
     }
