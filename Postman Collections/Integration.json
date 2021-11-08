@@ -357,7 +357,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"event_type\": \"UPLOAD APP TO FIREBASE\",\r\n    \"client_payload\": {\r\n        \"branch\": \"improvement/VDB-14015\",\r\n        \"build_variant\": \"VdbStaging\"\r\n    }\r\n}",
+          "raw": "{\r\n    \"event_type\": \"Generate Custom App Build\",\r\n    \"client_payload\": {\r\n        \"branch\": \"name{{$randomInt}}\",\r\n        \"title\": \"title{{$randomInt}}\",\r\n        \"body\": \"body{{$randomInt}}\"\r\n    }\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -393,7 +393,7 @@
   ],
   "variable": [
     {
-      "id": "67bb9975-6a0f-4796-ad15-ff17b69d820c",
+      "id": "4ea29643-6854-46f1-810b-99ab2113cc2d",
       "key": "auth_token",
       "value": "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"
     }
